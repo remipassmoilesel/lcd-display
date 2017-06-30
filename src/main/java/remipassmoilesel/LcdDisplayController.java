@@ -2,7 +2,6 @@ package remipassmoilesel;
 
 import remipassmoilesel.numbers.Number1;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,7 +9,10 @@ import java.util.List;
  */
 public class LcdDisplayController {
 
+    public static final int MIN_SCREEN_SIZE = 5;
+
     private LcdDisplay currentScreen;
+
 
     public LcdDisplayController() {
         this.currentScreen = null;
@@ -18,7 +20,7 @@ public class LcdDisplayController {
 
     public LcdDisplay newScreen(int size) {
 
-        if (size < 5) {
+        if (size < MIN_SCREEN_SIZE) {
             throw new RuntimeException("Size must be > 5");
         }
 
@@ -32,6 +34,16 @@ public class LcdDisplayController {
      * @param stringToDisplay
      */
     public void displayString(String stringToDisplay) {
+
+        checkCurrentScreen();
+
+        if(stringToDisplay == null){
+            throw new RuntimeException("String cannot be null");
+        }
+
+        if(stringToDisplay.length() > currentScreen.getSize()){
+            throw new RuntimeException("String is too long. Actual: " + stringToDisplay.length() + " Max: " + currentScreen.getSize());
+        }
 
         currentScreen.resetAll();
 
@@ -54,14 +66,22 @@ public class LcdDisplayController {
 
     }
 
+    private void checkCurrentScreen() {
+        if(currentScreen == null){
+            throw new RuntimeException("Yu must init screen with newScreen() method before print something");
+        }
+    }
+
     /**
      * Clear current screen
      */
     public void resetCurrentScreen() {
+        checkCurrentScreen();
         currentScreen.resetAll();
     }
 
     public LcdDisplay getCurrentScreen() {
+        checkCurrentScreen();
         return currentScreen;
     }
 }
