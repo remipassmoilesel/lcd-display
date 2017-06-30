@@ -61,5 +61,7 @@ public class LcdDisplayController {
         currentScreen.resetAll();
     }
 
-
+    public LcdDisplay getCurrentScreen() {
+        return currentScreen;
+    }
 }

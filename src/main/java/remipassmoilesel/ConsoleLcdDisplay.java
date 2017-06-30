@@ -41,6 +41,10 @@ public class ConsoleLcdDisplay extends LcdDisplay {
 
     }
 
+    public ArrayList<DisplayableChar> getDisplayUnits() {
+        return displayUnits;
+    }
+
     @Override
     public void resetAll() {
         displayUnits.clear();
