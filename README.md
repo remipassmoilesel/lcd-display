@@ -29,7 +29,8 @@ Nécéssite Git et Maven:
     |_| ..| |.|
     ..| ..| |_|
     
-    Ce test technique devrait nécessiter 3 h au maximum. N’hésite pas à justifier les choix que tu prendras pour ne pas dépasser cette limite.
+    Ce test technique devrait nécessiter 3 h au maximum. N’hésite pas à justifier
+     les choix que tu prendras pour ne pas dépasser cette limite.
      
     Tu peux faire ce test en JavaScript ou en Java.
 
@@ -47,14 +48,12 @@ Nécéssite Git et Maven:
  
 ## Analyse
 
-Test de conception et de développement autour de la création d'un affichage LCD.
-
-L'écran affichera des numéros uniquement, mais sera peut être sujet à extension.
-L'écran est composé d'unités d'affichage. Chaque unité est une grille de cases de 3 * 3 avec affichage possible des signes ' ', '_', '|'.
-
-L'écran sera affiché en console dans l'optique de respecter le temps du test et de diriger les efforts vers la conception.
-Le contrôle de l'affichage devra être séparé de l'affichage pour une meilleure maintenabilité du code.
-Le dispositif doit être testable.
+- Test de conception et de développement autour de la création d'un affichage LCD.
+- L'écran affichera des numéros uniquement, mais sera peut être sujet à extension.
+- L'écran est composé d'unités d'affichage. Chaque unité est une grille de cases de 3 * 3 avec affichage possible des signes ' ', '_', '|'.
+- L'écran sera affiché en console dans l'optique de respecter le temps du test et de diriger les efforts vers la conception.
+- Le contrôle de l'affichage devra être séparé de l'affichage pour une meilleure maintenabilité du code.
+- Le dispositif doit être testable.
 
 ## Choix de la technologie
 
@@ -63,22 +62,22 @@ De plus Java est un langage adapté à l'embarqué, en accord avec le sujet du t
 
 ## Point forts de l'implémentation
 
-    - Possibilité d'ajouter de nouveaux caractères
-    - Possibilité d'ajouter de nouveaux types d'écran
+- Possibilité d'ajouter de nouveaux caractères
+- Possibilité d'ajouter de nouveaux types d'écran
 
 ## Points faibles
 
-    - pas de déclaration explicites ni différenciation des exceptions
-    - code verbeux et peu optimisé dans l'optique de satisfaire le temps du test
-    - pas de Test Driven Design dans l'optique de satisfaire le temps du test 
+- Pas de déclaration explicites ni différenciation des exceptions
+- Code verbeux et peu optimisé dans l'optique de satisfaire le temps du test
+- Pas de Test Driven Design dans l'optique de satisfaire le temps du test 
 
 ## Travail restant
 
-    - Mettre en confrontation avec le besoin
-    - Faire plus de tests
-    - Executer une relecture et une analyse de code (SonarQube ?) 
-    - Améliorer la documentation intégrée au code
-    - Trouver un moyen de lister les DisplayableChar disponibles de manière plus élégante
-    - Terminer le diagramme de classes
-    
+- Mettre en confrontation avec le besoin
+- Faire plus de tests
+- Executer une relecture et une analyse de code (SonarQube ?) 
+- Améliorer la documentation intégrée au code
+- Trouver un moyen de lister les DisplayableChar disponibles de manière plus élégante
+- Terminer le diagramme de classes
+
 
