@@ -12,9 +12,9 @@ public class Launcher
 
         lcdController.newScreen(10);
 
-        lcdController.displayString("11");
-        lcdController.displayString("1111");
-        lcdController.displayString("1112");
+        lcdController.displayString("01");
+        lcdController.displayString("01234");
+        lcdController.displayString("0123456789");
 
     }
 }

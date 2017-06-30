@@ -1,6 +1,6 @@
 package remipassmoilesel;
 
-import remipassmoilesel.numbers.Number1;
+import remipassmoilesel.numbers.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +21,7 @@ public abstract class DisplayableChar {
 
     /**
      * Chars used to display the real world value
+     * // TODO: find a way to set it mandatory
      */
     protected List<List<String>> rawChars;
 
@@ -39,11 +40,23 @@ public abstract class DisplayableChar {
 
     /**
      * Return a list of all available real world chars
+     *
      * @return
      */
-    public static List<Number1> getAvailableDisplayableChars() {
+    public static List<DisplayableChar> getAvailableDisplayableChars() {
         // TODO: find a better way, introspection ?
-        return Arrays.asList(new Number1());
+        return Arrays.asList(
+                new Number0(),
+                new Number1(),
+                new Number2(),
+                new Number3(),
+                new Number4(),
+                new Number5(),
+                new Number6(),
+                new Number7(),
+                new Number8(),
+                new Number9()
+        );
     }
 
 }

@@ -47,7 +47,7 @@ public class LcdDisplayController {
 
         currentScreen.resetAll();
 
-        List<Number1> chars = DisplayableChar.getAvailableDisplayableChars();
+        List<DisplayableChar> chars = DisplayableChar.getAvailableDisplayableChars();
 
         for (int i = 0; i < stringToDisplay.length(); i++) {
 
