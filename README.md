@@ -1,4 +1,4 @@
-# Test techique de développement: Affichage sur écran LCD
+# Test technique de développement: Affichage sur écran LCD
 
 ## Sujet:
 
@@ -30,6 +30,7 @@
     - Choix de la technologie
     - Première conception à l'aide d'un diagramme de classe
     - Génération d'un archetype de projet Maven
+    - Implémentation d'un premier prototype
  
 ## Analyse
 
