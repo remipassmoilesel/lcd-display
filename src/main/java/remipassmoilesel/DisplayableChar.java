@@ -1,5 +1,8 @@
 package remipassmoilesel;
 
+import remipassmoilesel.numbers.Number1;
+
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -31,6 +34,16 @@ public abstract class DisplayableChar {
 
     public String getValue() {
         return value;
+    }
+
+
+    /**
+     * Return a list of all available real world chars
+     * @return
+     */
+    public static List<Number1> getAvailableDisplayableChars() {
+        // TODO: find a better way, introspection ?
+        return Arrays.asList(new Number1());
     }
 
 }

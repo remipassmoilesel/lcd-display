@@ -35,7 +35,7 @@ public class LcdDisplayController {
 
         currentScreen.resetAll();
 
-        List<Number1> chars = getAvailableDisplayableChars();
+        List<Number1> chars = DisplayableChar.getAvailableDisplayableChars();
 
         for (int i = 0; i < stringToDisplay.length(); i++) {
 
@@ -52,15 +52,6 @@ public class LcdDisplayController {
 
         currentScreen.print();
 
-    }
-
-    /**
-     * Return a list of all available real world chars
-     * @return
-     */
-    private List<Number1> getAvailableDisplayableChars() {
-        // TODO: find a better way, introspection ?
-        return Arrays.asList(new Number1());
     }
 
     /**
