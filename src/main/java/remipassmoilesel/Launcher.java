@@ -10,11 +10,11 @@ public class Launcher
 
         LcdDisplayController lcdController = new LcdDisplayController();
 
-        lcdController.newScreen(5);
+        lcdController.newScreen(10);
 
-        lcdController.displayString("11111");
-        lcdController.displayString("11111111");
         lcdController.displayString("11");
+        lcdController.displayString("1111");
+        lcdController.displayString("1112");
 
     }
 }

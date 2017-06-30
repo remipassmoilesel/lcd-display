@@ -53,11 +53,17 @@ public class LcdDisplayController {
 
             String charToDisplay = stringToDisplay.substring(i, i + 1);
 
+            boolean found = false;
             for (DisplayableChar c : chars){
                 if(c.getValue().equals(charToDisplay)){
                     currentScreen.setCharAt(i, c);
+                    found = true;
                     break;
                 }
+            }
+
+            if(found == false){
+                throw new RuntimeException("Unknown character: " + charToDisplay);
             }
 
         }
@@ -68,7 +74,7 @@ public class LcdDisplayController {
 
     private void checkCurrentScreen() {
         if(currentScreen == null){
-            throw new RuntimeException("Yu must init screen with newScreen() method before print something");
+            throw new RuntimeException("You must init screen with newScreen() method before print something");
         }
     }
 

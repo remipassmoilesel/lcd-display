@@ -31,21 +31,32 @@ public class LcdDisplayControllerTest {
 
     @Test(expected = RuntimeException.class)
     public void test2(){
+        // try to create too small screen
         LcdDisplayController lcdController = new LcdDisplayController();
         lcdController.newScreen(2);
     }
 
     @Test(expected = RuntimeException.class)
     public void test3(){
+        // try to display string without ceating screen
         LcdDisplayController lcdController = new LcdDisplayController();
-        lcdController.displayString("Hey hey !");
+        lcdController.displayString("111111");
     }
 
     @Test(expected = RuntimeException.class)
     public void test4(){
+        // try to display a too long string
         LcdDisplayController lcdController = new LcdDisplayController();
         lcdController.newScreen(5);
-        lcdController.displayString("Hey hey !");
+        lcdController.displayString("111111111111111111111111111");
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void test5(){
+        // try to display weirds chars
+        LcdDisplayController lcdController = new LcdDisplayController();
+        lcdController.newScreen(5);
+        lcdController.displayString("ùùù^^^ŝ");
     }
 
 }
