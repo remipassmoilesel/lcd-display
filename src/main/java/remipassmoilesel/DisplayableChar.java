@@ -46,6 +46,7 @@ public abstract class DisplayableChar {
     public static List<DisplayableChar> getAvailableDisplayableChars() {
         // TODO: find a better way, introspection ?
         return Arrays.asList(
+                new Blank(),
                 new Number0(),
                 new Number1(),
                 new Number2(),
