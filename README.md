@@ -9,7 +9,7 @@ Nécéssite Git et Maven:
     $ mvn test
     $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher"
 
-## Sujet:
+## Sujet
 
     Affichage sur écran LCD
     -----------------------
@@ -70,7 +70,7 @@ De plus Java est un langage adapté à l'embarqué, en accord avec le sujet du t
 
     - pas de déclaration explicites ni différenciation des exceptions
     - code verbeux et peu optimisé dans l'optique de satisfaire le temps du test
-    - pas de Test Driven Design, pour rentrer dans le temps de l'exercice
+    - pas de Test Driven Design dans l'optique de satisfaire le temps du test 
 
 ## Travail restant
 
