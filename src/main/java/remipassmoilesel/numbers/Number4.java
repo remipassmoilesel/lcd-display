@@ -4,9 +4,6 @@ import remipassmoilesel.DisplayableChar;
 
 import java.util.Arrays;
 
-/**
- * The number one !
- */
 public class Number4 extends DisplayableChar {
 
     public Number4(){
