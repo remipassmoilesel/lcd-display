@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+<svg width="51.705cm" height="26.918cm" viewBox="9.828 4.994 51.705 26.918"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Layer: Arrière-plan -->
+<g id="Arrière-plan">
+<!-- UML - Class -->
+<rect x="30.724" y="5.044" width="23.985" height="1.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="42.716" y="5.994"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+LcdDisplay</text>
+<rect x="30.724" y="6.444" width="23.985" height="1.000" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="30.874" y="7.144"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++displayUnitNumber</text>
+<rect x="30.724" y="7.444" width="23.985" height="3.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="30.874" y="8.144"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++getSize()</text>
+<text x="30.874" y="8.944"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++displayChar(displayUnitId:int,charToDisplay:DisplayableChar)</text>
+<text x="30.874" y="9.744"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++displayString(stringToDisplay:String)</text>
+<text x="30.874" y="10.544"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++resetAll()</text>
+<!-- UML - Class -->
+<rect x="30.685" y="20.035" width="11.665" height="1.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="36.518" y="20.985"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+DisplayableChar</text>
+<rect x="30.685" y="21.435" width="11.665" height="1.800" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="30.835" y="22.135"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++value: String</text>
+<text x="30.835" y="22.935"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rawChars: List&lt;List&lt;String&gt;&gt;</text>
+<rect x="30.685" y="23.235" width="11.665" height="1.800" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="30.835" y="23.935"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++getRawChars()</text>
+<text x="30.835" y="24.735"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++getValue()()</text>
+<!-- UML - Class -->
+<rect x="9.878" y="5.137" width="15.130" height="1.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="17.443" y="6.087"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+LcdDisplayController</text>
+<rect x="9.878" y="6.537" width="15.130" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<rect x="9.878" y="6.937" width="15.130" height="2.600" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="10.028" y="7.637"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++newScreen(displayUnitNumber)</text>
+<text x="10.028" y="8.437"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++displayString(stringToDisplay:String)</text>
+<text x="10.028" y="9.237"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++resetCurrentScreen()</text>
+<!-- UML - Class -->
+<rect x="33.581" y="28.576" width="7.815" height="2.200" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="37.489" y="29.376"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+&lt;&lt;DisplayableChar&gt;&gt;</text>
+<text x="37.489" y="30.326"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+Number1</text>
+<rect x="33.581" y="30.776" width="7.815" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<rect x="33.581" y="31.176" width="7.815" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="43.667" y="28.658" width="7.815" height="2.200" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="47.575" y="29.458"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+&lt;&lt;DisplayableChar&gt;&gt;</text>
+<text x="47.575" y="30.408"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+Number2</text>
+<rect x="43.667" y="30.858" width="7.815" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<rect x="43.667" y="31.258" width="7.815" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="53.538" y="28.861" width="7.815" height="2.200" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="57.446" y="29.661"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+&lt;&lt;DisplayableChar&gt;&gt;</text>
+<text x="57.446" y="30.611"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+Number3</text>
+<rect x="53.538" y="31.061" width="7.815" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<rect x="53.538" y="31.461" width="7.815" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<!-- Standard - ZigZagLine -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="42.716,10.844 42.716,17.624 43.716,17.624 43.716,22.735 42.350,22.735 "/>
+<!-- Standard - ZigZagLine -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="25.008,7.437 27.866,7.437 27.866,8.744 30.724,8.744 "/>
+<!-- UML - Class -->
+<rect x="52.575" y="15.977" width="8.907" height="1.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<text x="57.028" y="16.927"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+ConsoleLcdDisplay</text>
+<rect x="52.575" y="17.377" width="8.907" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<rect x="52.575" y="17.777" width="8.907" height="0.400" fill="#FFFFFF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Realizes -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100" stroke-dasharray="0.40,0.40" points="36.518,25.997 36.518,27.205 37.489,27.205 37.489,28.526 "/>
+<polygon fill="#FFFFFF" stroke="#000000" stroke-width="0.100"  points="36.918,25.997 36.518,25.197 36.118,25.997 "/>
+<!-- UML - Realizes -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100" stroke-dasharray="0.40,0.40" points="36.518,25.946 36.518,27.221 47.575,27.221 47.575,28.608 "/>
+<polygon fill="#FFFFFF" stroke="#000000" stroke-width="0.100"  points="36.918,25.946 36.518,25.146 36.118,25.946 "/>
+<!-- UML - Realizes -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100" stroke-dasharray="0.40,0.40" points="36.518,25.946 36.518,27.230 57.446,27.230 57.446,28.861 "/>
+<polygon fill="#FFFFFF" stroke="#000000" stroke-width="0.100"  points="36.918,25.946 36.518,25.146 36.118,25.946 "/>
+<!-- UML - Realizes -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100" stroke-dasharray="0.40,0.40" points="54.709,11.755 54.709,13.785 57.028,13.785 57.028,15.927 "/>
+<polygon fill="#FFFFFF" stroke="#000000" stroke-width="0.100"  points="55.109,11.755 54.709,10.955 54.309,11.755 "/>
+<!-- Standard - Text -->
+<text x="27.129" y="6.956"  fill="#000000" text-anchor="start" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Use</text>
+<!-- Standard - Text -->
+<text x="43.167" y="16.647"  fill="#000000" text-anchor="start" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Display</text>
+</g>
+</svg>

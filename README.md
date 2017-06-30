@@ -1,5 +1,14 @@
 # Test technique de développement: Affichage sur écran LCD
 
+## Utilisation du dépôt
+
+Nécéssite Git et Maven:
+
+    $ git clone https://github.com/remipassmoilesel/lcd-display
+    $ cd lcd-display
+    $ mvn test
+    $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher"
+
 ## Sujet:
 
     Affichage sur écran LCD
@@ -55,7 +64,7 @@ De plus Java est un langage adapté à l'embarqué, en accord avec le sujet du t
 ## Point forts de l'implémentation
 
     - Possibilité d'ajouter de nouveaux caractères
-    - Possibilité d'ajouter un nouveau type d'écran
+    - Possibilité d'ajouter de nouveaux types d'écran
 
 ## Points faibles
 
@@ -63,10 +72,13 @@ De plus Java est un langage adapté à l'embarqué, en accord avec le sujet du t
     - code verbeux et peu optimisé dans l'optique de satisfaire le temps du test
     - pas de Test Driven Design, pour rentrer dans le temps de l'exercice
 
-## Perspectives et travail restant
+## Travail restant
 
     - Mettre en confrontation avec le besoin
     - Faire plus de tests
-    - Trouver un moyen de lister les DisplayableChar disponibles de manière plus élégante
     - Executer une relecture et une analyse de code (SonarQube ?) 
+    - Améliorer la documentation intégrée au code
+    - Trouver un moyen de lister les DisplayableChar disponibles de manière plus élégante
+    - Terminer le diagramme de classes
+    
 
