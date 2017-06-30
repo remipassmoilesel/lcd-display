@@ -15,6 +15,7 @@ public class Launcher
         lcdController.displayString("01");
         lcdController.displayString("01234");
         lcdController.displayString("0123456789");
+        lcdController.displayString("01  56 789");
 
     }
 }

@@ -13,7 +13,6 @@ public class LcdDisplayController {
 
     private LcdDisplay currentScreen;
 
-
     public LcdDisplayController() {
         this.currentScreen = null;
     }
