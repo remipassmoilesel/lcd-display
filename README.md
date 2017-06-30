@@ -29,6 +29,7 @@
     - Analyse du sujet
     - Choix de la technologie
     - Première conception à l'aide d'un diagramme de classe
+    - Génération d'un archetype de projet Maven
  
 ## Analyse
 
