@@ -24,13 +24,17 @@
      
     Tu peux faire ce test en JavaScript ou en Java.
 
-## Chronologie
+## Chronologie de réalisation
 
-    - Analyse du sujet
-    - Choix de la technologie
-    - Première conception à l'aide d'un diagramme de classe
-    - Génération d'un archetype de projet Maven
-    - Implémentation d'un premier prototype
+1. Analyse du sujet
+1. Choix de la technologie
+1. Première conception à l'aide d'un diagramme de classe
+1. Génération d'un archetype de projet Maven
+1. Implémentation d'un premier prototype
+1. Ajout des premiers tests
+1. Améliorations et ajout des premières vérifications de pré-requis 
+1. Tests supplémentaire
+1. Rédaction finale
  
 ## Analyse
 
@@ -38,7 +42,6 @@ Test de conception et de développement autour de la création d'un affichage LC
 
 L'écran affichera des numéros uniquement, mais sera peut être sujet à extension.
 L'écran est composé d'unités d'affichage. Chaque unité est une grille de cases de 3 * 3 avec affichage possible des signes ' ', '_', '|'.
-Chaque unité d'affichage doit être effaçable (uniquement composée d'espaces). 
 
 L'écran sera affiché en console dans l'optique de respecter le temps du test et de diriger les efforts vers la conception.
 Le contrôle de l'affichage devra être séparé de l'affichage pour une meilleure maintenabilité du code.
@@ -49,9 +52,21 @@ Le dispositif doit être testable.
 Java SE 8 sera utilisé pour le test. Grâce à Maven il est facile et rapide de générer un archetype de projet avec infrastructure de test.
 De plus Java est un langage adapté à l'embarqué, en accord avec le sujet du test.
 
+## Point forts de l'implémentation
 
-## Point forts
+    - Possibilité d'ajouter de nouveaux caractères
+    - Possibilité d'ajouter un nouveau type d'écran
 
 ## Points faibles
 
-## Perspectives
+    - pas de déclaration explicites ni différenciation des exceptions
+    - code verbeux et peu optimisé dans l'optique de satisfaire le temps du test
+    - pas de Test Driven Design, pour rentrer dans le temps de l'exercice
+
+## Perspectives et travail restant
+
+    - Mettre en confrontation avec le besoin
+    - Faire plus de tests
+    - Trouver un moyen de lister les DisplayableChar disponibles de manière plus élégante
+    - Executer une relecture et une analyse de code (SonarQube ?) 
+
