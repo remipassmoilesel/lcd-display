@@ -11,6 +11,8 @@ public class ConsoleLcdDisplay extends LcdDisplay {
     private static final String SPACE_BETWEEN_DISPLAY_UNITS = "   ";
     public static final int MIN_SCREEN_SIZE = 5;
     private final ArrayList<DisplayableChar> displayUnits;
+    public static final String ANSI_CLS = "\u001b[2J";
+    public static final String ANSI_HOME = "\u001b[H";
 
     public ConsoleLcdDisplay(int displayUnitNumber) {
         super(displayUnitNumber);
@@ -30,10 +32,7 @@ public class ConsoleLcdDisplay extends LcdDisplay {
     @Override
     public void print() {
 
-        // TODO: find a way to clear console
-        System.out.println();
-        System.out.println("----- CLEAR CONSOLE -------");
-        System.out.println();
+        cls();
 
         int lineNumber = displayUnits.get(0).getRawChars().size();
         for (int i = 0; i < lineNumber; i++) {
@@ -58,5 +57,12 @@ public class ConsoleLcdDisplay extends LcdDisplay {
     @Override
     public void resetAll() {
         displayUnits.clear();
+        cls();
     }
+
+    public static void cls() {
+        System.out.print(ANSI_CLS + ANSI_HOME);
+        System.out.flush();
+    }
+
 }

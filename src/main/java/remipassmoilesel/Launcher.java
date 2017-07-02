@@ -30,24 +30,25 @@ public class Launcher {
 
         Options options = new Options();
         options.addOption("t", false, "display current time");
+        options.addOption("d", false, "display digits");
 
         CommandLineParser parser = new DefaultParser();
         CommandLine cmd = null;
         try {
             cmd = parser.parse(options, args);
         } catch (ParseException e) {
-            printHelp();
+            printHelp(e);
             return;
         }
 
+        LcdDisplayController lcdController = new LcdDisplayController();
+
+        String firstTime = String.valueOf(System.currentTimeMillis());
+        ConsoleLcdDisplay screen = new ConsoleLcdDisplay(firstTime.length());
+        lcdController.setCurrentScreen(screen);
+
         // display time
         if (cmd.hasOption("t")) {
-
-            LcdDisplayController lcdController = new LcdDisplayController();
-
-            String firstTime = String.valueOf(System.currentTimeMillis());
-            ConsoleLcdDisplay screen = new ConsoleLcdDisplay(firstTime.length());
-            lcdController.setCurrentScreen(screen);
 
             println("Press CTRL + C to stop");
             println("-------------------");
@@ -66,8 +67,44 @@ public class Launcher {
             }
 
 
+        }
+
+        // Blink mode, netscape is back
+        else if (cmd.hasOption("d")) {
+
+            if (args.length < 2) {
+                println("You must specify digits. Example: -d 123456789");
+                printHelp(null);
+                return;
+            }
+
+            println("Press CTRL + C to stop");
+            println("-------------------");
+            println("");
+
+            String toDisplay = args[1];
+
+            try {
+
+                Thread.sleep(1000);
+
+                lcdController.blink(5, toDisplay);
+
+                Thread.sleep(1000);
+
+                for (int i = 0; i < 5; i++) {
+
+                    lcdController.leftToRight(toDisplay);
+                    lcdController.rightToLeft(toDisplay);
+                }
+
+            } catch (InterruptedException e) {
+                log(e);
+            }
+
+
         } else {
-            printHelp();
+            printHelp(null);
         }
 
     }
@@ -77,14 +114,21 @@ public class Launcher {
         System.exit(1);
     }
 
-    private static void printHelp() {
+    private static void printHelp(Throwable e) {
         println("LcdDisplay: ");
-        println("   -t              : count time");
-        println("   -d abcdef123    : display abcdef123");
+        println("   -t           : count time");
+        println("   -d 123456    : display 123456");
+
+        if (e != null) {
+            println("");
+            println("Error: " + e.getMessage());
+        }
+
     }
 
     private static void println(String s) {
         System.out.println(s);
+        System.out.flush();
     }
 
 }

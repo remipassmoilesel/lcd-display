@@ -7,6 +7,8 @@ import java.util.List;
  */
 public class LcdDisplayController {
 
+    private static final long ANIMATION_WAIT_TIME = 70;
+    private static final long BLINK_ANIMATION_WAIT_TIME = 200;
     private LcdDisplay currentScreen;
 
     public LcdDisplayController() {
@@ -83,5 +85,60 @@ public class LcdDisplayController {
     public LcdDisplay getCurrentScreen() {
         checkCurrentScreen();
         return currentScreen;
+    }
+
+    public void blink(int nbr, String toDisplay) throws InterruptedException {
+
+        nbr += 1;
+
+        String blank = "";
+        for (int i = 0; i < toDisplay.length(); i++) {
+            blank += " ";
+        }
+
+        for (int i = 0; i < nbr; i++) {
+            if(i % 2 == 0){
+                displayString(toDisplay);
+            }
+            else {
+                displayString(blank);
+            }
+
+            Thread.sleep(BLINK_ANIMATION_WAIT_TIME);
+            resetCurrentScreen();
+        }
+    }
+
+    public void leftToRight(String toDisplay) throws InterruptedException {
+
+        for (int i = 0; i < toDisplay.length(); i++) {
+
+            String withSpaces = "";
+            for (int j = 0; j < i; j++) {
+                withSpaces += " ";
+            }
+            withSpaces += toDisplay.substring(i, toDisplay.length());
+
+            displayString(withSpaces);
+
+            Thread.sleep(ANIMATION_WAIT_TIME);
+            resetCurrentScreen();
+        }
+    }
+
+    public void rightToLeft(String toDisplay) throws InterruptedException {
+
+        for (int i = 0; i < toDisplay.length(); i++) {
+
+            String withSpaces = toDisplay.substring(0, i);
+            for (int j = i; j < toDisplay.length(); j++) {
+                withSpaces += " ";
+            }
+
+            displayString(withSpaces);
+
+            Thread.sleep(ANIMATION_WAIT_TIME);
+            resetCurrentScreen();
+        }
     }
 }

@@ -9,6 +9,10 @@ Nécéssite Git et Maven:
     $ mvn test
     $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher"
 
+Stop watch:
+
+    $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher" -Dexec.args="-t"
+
 ## Sujet
 
     Affichage sur écran LCD
