@@ -7,11 +7,10 @@ Nécéssite Git et Maven:
     $ git clone https://github.com/remipassmoilesel/lcd-display
     $ cd lcd-display
     $ mvn test
-    $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher"
-
-Stop watch:
 
     $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher" -Dexec.args="-t"
+    $ mvn exec:java -Dexec.mainClass="remipassmoilesel.Launcher" -Dexec.args="-d 12345"
+
 
 ## Sujet
 
