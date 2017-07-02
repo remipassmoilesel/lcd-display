@@ -10,7 +10,8 @@ public class Launcher
 
         LcdDisplayController lcdController = new LcdDisplayController();
 
-        lcdController.newScreen(10);
+        ConsoleLcdDisplay screen = new ConsoleLcdDisplay(10);
+        lcdController.setCurrentScreen(screen);
 
         lcdController.displayString("01");
         lcdController.displayString("01234");
