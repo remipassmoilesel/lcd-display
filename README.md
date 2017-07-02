@@ -4,7 +4,7 @@
 
 Nécéssite Git et Maven:
 
-    $ git clone https://github.com/remipassmoilesel/lcd-display
+    $ git clone git@github.com:remipassmoilesel/lcd-display.git -b just-3-commits-more-😜
     $ cd lcd-display
     $ mvn test
 
